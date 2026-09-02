@@ -51,12 +51,19 @@ export type SkillGroup = {
   skills: string[];
 };
 
-// ponytail: placeholder skills, replace with the real list once supplied
 export const skillGroups: SkillGroup[] = [
-  { category: "Frontend", skills: ["HTML", "CSS", "JavaScript", "React"] },
-  { category: "Backend", skills: ["Node.js", "PHP", "Laravel", "Express"] },
-  { category: "Database", skills: ["MySQL", "MongoDB"] },
-  { category: "Tools", skills: ["Git", "Docker"] },
+  { category: "Languages", skills: ["Go (Golang)", "PHP", "JavaScript", "Java"] },
+  {
+    category: "Backend",
+    skills: ["Echo", "Laravel", "Node.js", "Express.js", "REST APIs"],
+  },
+  { category: "Frontend", skills: ["React.js", "Next.js", "HTML5", "CSS"] },
+  {
+    category: "Databases & Search",
+    skills: ["PostgreSQL", "MySQL", "Elasticsearch"],
+  },
+  { category: "Caching & Messaging", skills: ["Redis", "RabbitMQ"] },
+  { category: "Other", skills: ["Android Development", "Google Web Designer"] },
 ];
 
 export type ExperienceEntry = {
@@ -64,34 +71,91 @@ export type ExperienceEntry = {
   organization: string;
   period: string;
   description: string;
+  techStack: string[];
+  freelance?: boolean;
 };
 
-// ponytail: placeholder timeline, replace with the real work history once supplied
 export const experience: ExperienceEntry[] = [
   {
     role: "Software Engineer",
-    organization: "Freelance",
-    period: "2021 — Present",
+    organization: "PT Tiga Daya Digital Indonesia",
+    period: "Nov 2022 — Present",
     description:
-      "Building web and Android applications for clients across various industries.",
+      "Build backend services for a used-car marketplace with Go (Echo) and PostgreSQL, power search with Elasticsearch, and use Redis/RabbitMQ for performance-sensitive and async workflows. Contribute to a vehicle Price Engine computing statistical market pricing, plus Laravel admin tools and React.js/Next.js frontend features.",
+    techStack: [
+      "Go",
+      "Echo",
+      "PostgreSQL",
+      "Elasticsearch",
+      "Redis",
+      "RabbitMQ",
+      "Laravel",
+      "React.js",
+      "Next.js",
+    ],
   },
   {
-    role: "Web Developer",
-    organization: "Placeholder Company",
-    period: "2020 — 2021",
-    description: "Developed and maintained internal web tools and websites.",
+    role: "Freelance Software Engineer",
+    organization: "PT Trijaya Aksesoris Garmen — Inventory Management System",
+    period: "Mar 2023 — Jun 2023",
+    freelance: true,
+    description:
+      "Designed and built a web-based inventory management system end-to-end, covering stock movement, suppliers, customers, and operational reporting.",
+    techStack: ["Laravel", "PHP", "MySQL"],
+  },
+  {
+    role: "Software Engineer",
+    organization: "Dentsu Creative — Singapore (Remote)",
+    period: "Aug 2021 — Oct 2022",
+    description:
+      "Built the frontend of a Meta advertising analytics platform and an internal campaign app (Vue/Nuxt + Node/Express), plus HTML5 ad banners and a Toyota Gazoo Racing web experience, for clients including Meta, Toyota, Manulife, and American Express.",
+    techStack: ["React.js", "Next.js", "Vue.js", "Nuxt.js", "Node.js", "Express.js"],
+  },
+  {
+    role: "Freelance Software Engineer",
+    organization: "Mozza Dental Clinic — Clinic & Patient App",
+    period: "Apr 2022 — Jun 2022",
+    freelance: true,
+    description:
+      "Built an end-to-end clinic ecosystem: an Android patient app, a Laravel clinic management system, REST APIs, and a real-time queue display with text-to-speech announcements.",
+    techStack: ["Java", "Android", "Laravel", "MySQL", "Pusher"],
+  },
+  {
+    role: "Junior Software Engineer",
+    organization: "Smart Integrated System",
+    period: "Dec 2018 — Jan 2020",
+    description:
+      "Developed client web applications with CodeIgniter 3 and Laravel, and contributed to Android app development in Java.",
+    techStack: ["PHP", "CodeIgniter 3", "Laravel", "Java", "Android"],
   },
 ];
 
 export const profile = {
   name: "Marcellino",
   role: "Software Engineer",
-  location: "Palembang, South Sumatra",
-  bio: "Hi, I'm Marcel — a software engineer based in Palembang with a strong foundation in web and Android development. I enjoy solving problems and picking up new things in tech.",
+  location: "Jakarta, Indonesia",
+  email: "chyel.mlino@gmail.com",
+  bio: "Backend-focused Software Engineer with 6+ years of professional and freelance experience building web, backend, and mobile applications. I work mainly with Go, PostgreSQL, Elasticsearch, Redis, and RabbitMQ, and Laravel, with full-stack experience across React.js, Next.js, and Node.js — from automotive platforms and pricing systems to end-to-end business applications.",
   avatar: "/img/avatar.png",
+  resumeUrl: "/Marcellino-CV.pdf",
+  education: {
+    degree: "B.Comp.Sci. (S.Kom.) — Informatics Engineering",
+    school: "Universitas Multi Data Palembang",
+    period: "2018 — 2022",
+    gpa: "3.76 / 4.00",
+  },
+  languages: [
+    { name: "Indonesian", level: "Native" },
+    { name: "English", level: "Professional Working Proficiency" },
+  ],
 };
 
 export const socialLinks = [
+  {
+    label: "Email",
+    href: `mailto:${profile.email}`,
+    icon: "email",
+  },
   { label: "WhatsApp", href: "https://wa.me/6282233855882", icon: "whatsapp" },
   { label: "GitHub", href: "https://github.com/marksterben", icon: "github" },
   {

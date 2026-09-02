@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Marcellino — Software Engineer",
   description:
-    "Portfolio of Marcellino, a software engineer based in Palembang building web and Android applications.",
+    "Portfolio of Marcellino, a backend-focused software engineer based in Jakarta building web, backend, and mobile applications with Go, PostgreSQL, and React/Next.js.",
   icons: { icon: "/img/icon.png" },
 };
 
