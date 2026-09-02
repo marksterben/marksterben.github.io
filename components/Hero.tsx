@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HiOutlineDownload } from "react-icons/hi";
 import { profile } from "@/lib/data";
 
 export default function Hero() {
@@ -29,16 +30,18 @@ export default function Hero() {
 
       <div className="flex flex-wrap justify-center gap-4 pt-4">
         <a
-          href="#portfolio"
-          className="rounded-md bg-linear-to-r from-accent to-accent-2 px-5 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
+          href={profile.resumeUrl}
+          download
+          className="flex items-center gap-2 rounded-md bg-linear-to-r from-accent to-accent-2 px-5 py-2.5 text-sm font-semibold text-bg transition-opacity hover:opacity-90"
         >
-          View Projects
+          <HiOutlineDownload size={18} />
+          Download CV
         </a>
         <a
-          href="#contact"
+          href="#portfolio"
           className="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-fg transition-colors hover:border-accent"
         >
-          Contact Me
+          View Projects
         </a>
       </div>
     </section>
