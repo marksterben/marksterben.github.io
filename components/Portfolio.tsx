@@ -19,7 +19,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="mx-auto max-w-5xl px-6 py-24">
       <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-        Portfolio
+        Stuff I&apos;ve Built
       </h2>
       <div className="mt-3 h-px w-16 bg-linear-to-r from-accent to-accent-2" />
 
