@@ -4,9 +4,8 @@ import { useState } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 const links = [
-  { href: "#portfolio", label: "Portfolio" },
+  { href: "#portfolio", label: "Stuff I've Built" },
   { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
